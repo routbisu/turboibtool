@@ -178,18 +178,25 @@ namespace IB_QA_Tools
                 PolicyProductType productType = ValidatePolicyNumber(policyNumber);
                 long policyInstalmentID = GetPolicyInstalmentIdFromPolicyNumber(policyNumber, productType);
 
-                string sql = "JUNK", sqlFormat = "Update {0}PolicyPaymentScheduleDetails Set PaymentStatusCode = '{1}', ReasonForFailure = '{5}' Where InstalmentNumber = {2} And RetryCount = {3} And {0}PolicyInstalmentID = {4}";
+                string sql = "JUNK", sqlFormat = "Update {0}PolicyPaymentScheduleDetails Set PaymentStatusCode = '{1}', ReasonForFailure = '{5}' Where InstalmentNumber = {2} And {3} And {0}PolicyInstalmentID = {4}";
 
+                string retryCountText = " RetryCount = " + retryCount.ToString() + " ";
+
+                if (retryCount == 0)
+                {
+                    retryCountText = " (RetryCount = 0 Or RetryCount Is Null) ";
+                }
+                
                 switch (productType)
                 {
                     case PolicyProductType.HOME:
-                        sql = string.Format(sqlFormat, "HomeContent", paymentStatus, instalmentNumber, retryCount, policyInstalmentID, failureReason);
+                        sql = string.Format(sqlFormat, "HomeContent", paymentStatus, instalmentNumber, retryCountText, policyInstalmentID, failureReason);
                         break;
                     case PolicyProductType.LANDLORD:
-                        sql = string.Format(sqlFormat, "Landlord", paymentStatus, instalmentNumber, retryCount, policyInstalmentID, failureReason);
+                        sql = string.Format(sqlFormat, "Landlord", paymentStatus, instalmentNumber, retryCountText, policyInstalmentID, failureReason);
                         break;
                     case PolicyProductType.MOTOR:
-                        sql = string.Format(sqlFormat, "Motor", paymentStatus, instalmentNumber, retryCount, policyInstalmentID, failureReason);
+                        sql = string.Format(sqlFormat, "Motor", paymentStatus, instalmentNumber, retryCountText, policyInstalmentID, failureReason);
                         break;
                 }
 
