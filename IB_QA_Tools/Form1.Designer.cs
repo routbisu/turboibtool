@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainWindow));
             this.txtPolicyNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,9 +44,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnUpdateStatus = new System.Windows.Forms.Button();
             this.panelPaymentStatus = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddRetry = new System.Windows.Forms.Button();
+            this.btnDeleteRetry = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvPaymentSchedule)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panelPaymentStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPolicyNumber
@@ -132,7 +137,7 @@
             // txtReasonFailure
             // 
             this.txtReasonFailure.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReasonFailure.Location = new System.Drawing.Point(571, 18);
+            this.txtReasonFailure.Location = new System.Drawing.Point(270, 17);
             this.txtReasonFailure.Name = "txtReasonFailure";
             this.txtReasonFailure.Size = new System.Drawing.Size(212, 27);
             this.txtReasonFailure.TabIndex = 7;
@@ -141,7 +146,7 @@
             // 
             this.cbPaymentStatus.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPaymentStatus.FormattingEnabled = true;
-            this.cbPaymentStatus.Location = new System.Drawing.Point(379, 18);
+            this.cbPaymentStatus.Location = new System.Drawing.Point(78, 19);
             this.cbPaymentStatus.Name = "cbPaymentStatus";
             this.cbPaymentStatus.Size = new System.Drawing.Size(186, 28);
             this.cbPaymentStatus.TabIndex = 9;
@@ -185,7 +190,7 @@
             this.btnUpdateStatus.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStatus.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStatus.Location = new System.Drawing.Point(788, 17);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(488, 17);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
             this.btnUpdateStatus.Size = new System.Drawing.Size(106, 28);
             this.btnUpdateStatus.TabIndex = 8;
@@ -199,10 +204,46 @@
             this.panelPaymentStatus.Controls.Add(this.txtReasonFailure);
             this.panelPaymentStatus.Controls.Add(this.cbPaymentStatus);
             this.panelPaymentStatus.Enabled = false;
-            this.panelPaymentStatus.Location = new System.Drawing.Point(12, 434);
+            this.panelPaymentStatus.Location = new System.Drawing.Point(312, 434);
             this.panelPaymentStatus.Name = "panelPaymentStatus";
-            this.panelPaymentStatus.Size = new System.Drawing.Size(906, 51);
+            this.panelPaymentStatus.Size = new System.Drawing.Size(606, 51);
             this.panelPaymentStatus.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::IB_QA_Tools.Properties.Resources.logo2_300x146_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(870, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddRetry
+            // 
+            this.btnAddRetry.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddRetry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddRetry.ForeColor = System.Drawing.Color.White;
+            this.btnAddRetry.Location = new System.Drawing.Point(22, 453);
+            this.btnAddRetry.Name = "btnAddRetry";
+            this.btnAddRetry.Size = new System.Drawing.Size(86, 28);
+            this.btnAddRetry.TabIndex = 10;
+            this.btnAddRetry.Text = "Add Retry";
+            this.btnAddRetry.UseVisualStyleBackColor = false;
+            this.btnAddRetry.Visible = false;
+            // 
+            // btnDeleteRetry
+            // 
+            this.btnDeleteRetry.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDeleteRetry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteRetry.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteRetry.Location = new System.Drawing.Point(113, 453);
+            this.btnDeleteRetry.Name = "btnDeleteRetry";
+            this.btnDeleteRetry.Size = new System.Drawing.Size(96, 28);
+            this.btnDeleteRetry.TabIndex = 14;
+            this.btnDeleteRetry.Text = "Delete Retry";
+            this.btnDeleteRetry.UseVisualStyleBackColor = false;
+            this.btnDeleteRetry.Visible = false;
             // 
             // frmMainWindow
             // 
@@ -210,6 +251,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 498);
+            this.Controls.Add(this.btnDeleteRetry);
+            this.Controls.Add(this.btnAddRetry);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -222,6 +266,7 @@
             this.Controls.Add(this.panelPaymentStatus);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMainWindow";
@@ -232,6 +277,7 @@
             this.menuStrip1.PerformLayout();
             this.panelPaymentStatus.ResumeLayout(false);
             this.panelPaymentStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +300,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnUpdateStatus;
         private System.Windows.Forms.Panel panelPaymentStatus;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAddRetry;
+        private System.Windows.Forms.Button btnDeleteRetry;
     }
 }
 

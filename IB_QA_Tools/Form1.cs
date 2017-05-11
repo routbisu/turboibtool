@@ -62,6 +62,12 @@ namespace IB_QA_Tools
             {
                 btnGetSchedule.Visible = false;
             }
+
+            if(e.KeyCode == Keys.Enter)
+            {
+                selectedPolicyNumber = txtPolicyNumber.Text.Trim();
+                RefreshPolicyInfoGrid();
+            }
         }
         
         private void btnUpdateStatus_Click(object sender, EventArgs e)
@@ -121,11 +127,34 @@ namespace IB_QA_Tools
                             break;
                     }
 
+                    // Show Delete Retry Button
+                    int retryCount = Convert.ToInt32(allSelectedRows[0].Cells[5].Value);
+                    if(retryCount > 0)
+                    {
+                        btnDeleteRetry.Visible = true;
+                    }
+                    else
+                    {
+                        btnDeleteRetry.Visible = false;
+                    }
+
+
+                    if (retryCount < 2)
+                    {
+                        btnAddRetry.Visible = true;
+                    }
+                    else
+                    {
+                        btnAddRetry.Visible = false;
+                    }
+                        
                 }
                 else
                 {
                     cbPaymentStatus.SelectedIndex = 2;
                     txtReasonFailure.Text = "";
+                    btnDeleteRetry.Visible = false;
+                    btnAddRetry.Visible = false;
                 }
 
                 panelPaymentStatus.Enabled = true;
@@ -133,6 +162,7 @@ namespace IB_QA_Tools
             else
             {
                 panelPaymentStatus.Enabled = false;
+                btnDeleteRetry.Visible = false;
             }
         }
 
