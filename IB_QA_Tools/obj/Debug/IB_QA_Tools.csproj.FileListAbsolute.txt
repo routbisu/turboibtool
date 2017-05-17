@@ -1,7 +1,6 @@
 C:\Projects\Xceedance\AIG_Day1.2\QA_Tools\IB_QA_Tool\IB_QA_Tools\IB_QA_Tools\bin\Debug\IB_QA_Tools.exe.config
 C:\Projects\Xceedance\AIG_Day1.2\QA_Tools\IB_QA_Tool\IB_QA_Tools\IB_QA_Tools\bin\Debug\IB_QA_Tools.exe
 C:\Projects\Xceedance\AIG_Day1.2\QA_Tools\IB_QA_Tool\IB_QA_Tools\IB_QA_Tools\bin\Debug\IB_QA_Tools.pdb
-C:\Projects\Xceedance\AIG_Day1.2\QA_Tools\IB_QA_Tool\IB_QA_Tools\IB_QA_Tools\obj\Debug\IB_QA_Tools.csprojResolveAssemblyReference.cache
 C:\Projects\Xceedance\AIG_Day1.2\QA_Tools\IB_QA_Tool\IB_QA_Tools\IB_QA_Tools\obj\Debug\IB_QA_Tools.frmMainWindow.resources
 C:\Projects\Xceedance\AIG_Day1.2\QA_Tools\IB_QA_Tool\IB_QA_Tools\IB_QA_Tools\obj\Debug\IB_QA_Tools.Properties.Resources.resources
 C:\Projects\Xceedance\AIG_Day1.2\QA_Tools\IB_QA_Tool\IB_QA_Tools\IB_QA_Tools\obj\Debug\IB_QA_Tools.csproj.GenerateResource.Cache

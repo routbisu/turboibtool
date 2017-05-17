@@ -63,7 +63,7 @@ namespace IB_QA_Tools
             }
             catch (Exception)
             {
-                return null;
+                throw;
             }
         }
 
@@ -124,7 +124,8 @@ namespace IB_QA_Tools
                         break;
                 }
 
-                return Convert.ToInt64(RunSQLQuerySingleResult(sql));
+                var sqlResponse = RunSQLQuerySingleResult(sql);
+                return Convert.ToInt64(sqlResponse);
             }
             catch (Exception ex)
             {
@@ -214,6 +215,15 @@ namespace IB_QA_Tools
                 connection.Close();
             }
         }
+
+        //public bool AddRetry(string policyNumber, int instalmentNumber)
+        //{
+        //    PolicyProductType productType = ValidatePolicyNumber(policyNumber);
+        //    long policyInstalmentID = GetPolicyInstalmentIdFromPolicyNumber(policyNumber, productType);
+
+        //    string sql = "JUNK", maxRetryCountSQLFormat = "Select Max(RetryCount) From {0}PolicyPaymentScheduleDetails Where {0}PolicyInstalmentId = {1}",
+        //        addRetrySQLFormat = "Insert Into HomeContentPolicyPaymentScheduleDetails ( MotorPolicyInstalmentID, InstalmentDate, InstalmentAmount, PaymentStatusCode, RetryCount, RetryDate, InstalmentNumber) Value ()";
+        //}
 
         #endregion
     }

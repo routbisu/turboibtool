@@ -231,6 +231,7 @@
             this.btnAddRetry.Text = "Add Retry";
             this.btnAddRetry.UseVisualStyleBackColor = false;
             this.btnAddRetry.Visible = false;
+            this.btnAddRetry.Click += new System.EventHandler(this.btnAddRetry_Click);
             // 
             // btnDeleteRetry
             // 

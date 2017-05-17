@@ -218,5 +218,10 @@ namespace IB_QA_Tools
                 txtReasonFailure.Text = "Fatal Dishonor";
             }
         }
+
+        private void btnAddRetry_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
